@@ -1,0 +1,85 @@
+/* =========================================
+   HERO SECTION (INICIO)
+   ========================================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    background: radial-gradient(circle at 10% 50%, rgba(0, 210, 255, 0.08) 0%, transparent 60%);
+    margin-top: 0;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin-top: 50px;
+}
+
+.saludo {
+    color: var(--neon-blue);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.titulo-principal {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+
+.resaltado {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--neon-blue);
+    background: linear-gradient(90deg, var(--neon-blue), var(--neon-dark));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.descripcion {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    margin-bottom: 45px;
+    max-width: 600px;
+}
+
+.botones {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.btn-primario {
+    padding: 15px 35px;
+    background-color: transparent;
+    color: var(--neon-blue);
+    border: 2px solid var(--neon-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 4px;
+    transition: var(--transition-medium);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.1);
+}
+
+.btn-primario:hover {
+    background-color: var(--neon-blue);
+    color: var(--bg-dark);
+    box-shadow: 0 0 25px rgba(0, 210, 255, 0.6);
+}
+
+.btn-secundario {
+    padding: 15px 20px;
+    color: var(--text-main);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition-fast);
+}
+
+.btn-secundario:hover {
+    color: var(--neon-blue);
+}

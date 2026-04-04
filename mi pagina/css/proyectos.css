@@ -1,0 +1,162 @@
+/* =========================================
+   SECCIÓN DE PROYECTOS Y CARRUSEL
+   ========================================= */
+.proyectos {
+    padding: 100px 50px;
+    background-color: var(--bg-dark);
+}
+
+.contenedor-proyectos {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.titulo-centrado {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.subtitulo-centrado {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+}
+
+.grid-proyectos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+}
+
+.tarjeta-proyecto {
+    background-color: var(--bg-light);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-medium);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-10px);
+    border-color: rgba(0, 210, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 210, 255, 0.1);
+}
+
+/* Carrusel de Imágenes (Scroll Snap) */
+.imagen-proyecto {
+    height: 220px;
+    position: relative;
+    background-color: #1a1a20;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.imagen-proyecto::-webkit-scrollbar {
+    height: 6px;
+}
+
+.imagen-proyecto::-webkit-scrollbar-thumb {
+    background-color: var(--neon-blue);
+    border-radius: 10px;
+}
+
+.imagen-proyecto::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.img-portada {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+}
+
+.etiqueta-estado {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: rgba(10, 10, 12, 0.8);
+    backdrop-filter: blur(5px);
+    color: var(--text-main);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.etiqueta-estado.pulse {
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+.contenido-proyecto {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tags-tech {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.tags-tech span {
+    color: var(--neon-blue);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contenido-proyecto h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: var(--text-main);
+}
+
+.contenido-proyecto p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex-grow: 1;
+}
+
+.btn-proyecto {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 0;
+    width: 100%;
+    background-color: transparent;
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-weight: bold;
+    transition: var(--transition-fast);
+}
+
+.tarjeta-proyecto:hover .btn-proyecto:not(.btn-disabled) {
+    background-color: var(--neon-blue);
+    color: var(--bg-dark);
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+.btn-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

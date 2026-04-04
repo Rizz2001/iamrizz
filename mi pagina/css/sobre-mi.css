@@ -1,0 +1,92 @@
+/* =========================================
+   SECCIÓN SOBRE MÍ Y SKILLS
+   ========================================= */
+.sobre-mi {
+    padding: 100px 50px;
+    background-color: var(--bg-dark);
+    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+.contenedor-sobre-mi {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.titulo-seccion {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    font-weight: 900;
+}
+
+.resaltado-azul {
+    color: var(--neon-blue);
+    text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+}
+
+.texto-sobre-mi p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.texto-sobre-mi strong {
+    color: var(--text-main);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.skill-card {
+    background: var(--bg-light);
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--neon-blue);
+    transition: var(--transition-medium);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(0, 210, 255, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 210, 255, 0.1);
+}
+
+.skill-card:hover::before {
+    width: 100%;
+}
+
+.skill-icono {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+.skill-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}

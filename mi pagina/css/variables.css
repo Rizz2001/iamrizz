@@ -1,0 +1,14 @@
+/* =========================================
+   VARIABLES GLOBALES | TEMA RIZZ (DARK/NEON)
+   ========================================= */
+:root {
+    --bg-dark: #0a0a0c;
+    --bg-light: #151518;
+    --text-main: #f3f3f3;
+    --text-muted: #a0a0a0;
+    --neon-blue: #00d2ff;
+    --neon-dark: #007bff;
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --transition-fast: 0.2s ease;
+    --transition-medium: 0.4s ease;
+}
