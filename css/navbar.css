@@ -26,6 +26,19 @@
     color: var(--neon-blue);
 }
 
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.menu-toggle:focus {
+    outline: 2px solid var(--neon-blue);
+    outline-offset: 4px;
+}
+
 .nav-links {
     display: flex;
     gap: 35px;

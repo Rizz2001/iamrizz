@@ -10,8 +10,9 @@ const navLinksItems = document.querySelectorAll('.nav-links a');
 if (mobileMenu && navMenu) {
     // Abrir/Cerrar menú al tocar las 3 rayitas
     mobileMenu.addEventListener('click', () => {
-        mobileMenu.classList.toggle('is-active');
+        const isOpen = mobileMenu.classList.toggle('is-active');
         navMenu.classList.toggle('active');
+        mobileMenu.setAttribute('aria-expanded', String(isOpen));
     });
 
     // Cerrar el menú automáticamente cuando el usuario toca un enlace

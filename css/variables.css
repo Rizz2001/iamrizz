@@ -8,7 +8,8 @@
     --text-muted: #a0a0a0;
     --neon-blue: #00d2ff;
     --neon-dark: #007bff;
-    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    --font-main: 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-bold: 'Poppins', system-ui, -apple-system, sans-serif;
     --transition-fast: 0.2s ease;
     --transition-medium: 0.4s ease;
 }

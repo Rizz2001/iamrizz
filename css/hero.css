@@ -2,17 +2,41 @@
    HERO SECTION (INICIO)
    ========================================= */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 50px;
+    padding: 100px 50px 50px;
     background: radial-gradient(circle at 10% 50%, rgba(0, 210, 255, 0.08) 0%, transparent 60%);
     margin-top: 0;
 }
 
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 60px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
 .hero-content {
-    max-width: 800px;
-    margin-top: 50px;
+    max-width: 650px;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(0, 210, 255, 0.15);
 }
 
 .saludo {
@@ -22,6 +46,7 @@
     text-transform: uppercase;
     letter-spacing: 3px;
     font-weight: 700;
+    font-family: var(--font-bold);
 }
 
 .titulo-principal {
@@ -29,6 +54,7 @@
     line-height: 1.1;
     margin-bottom: 25px;
     font-weight: 900;
+    font-family: var(--font-bold);
 }
 
 .resaltado {

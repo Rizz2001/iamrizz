@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aldrin Valera | Rizz</title>
-    
+    <title>Aldrin V | Rizz</title>
+    <meta name="description" content="Portafolio de Aldrin Valera, desarrollador web experto en HTML, CSS y JavaScript. Web oscura, optimizada y con proyectos reales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/navbar.css">
@@ -18,43 +21,47 @@
 
     <nav class="navbar">
         <div class="logo">RIZZ<span>.</span></div>
-        <div class="menu-toggle" id="mobile-menu">
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú" aria-controls="nav-menu" aria-expanded="false">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </div>
+        </button>
         <ul class="nav-links" id="nav-menu">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#sobre-mi">Sobre Mí</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#" class="btn-contacto" id="btn-ws">Hablemos</a></li>
+            <li><a href="https://wa.me/584220012375?text=%C2%A1Hola%20Aldrin!%20Estuve%20viendo%20tu%20portafolio%20web%20y%20me%20gustar%C3%ADa%20hablar%20contigo%20sobre%20un%20proyecto." class="btn-contacto" id="btn-ws">Hablemos</a></li>
         </ul>
     </nav>
 
     <header class="hero" id="inicio">
-        <div class="hero-content">
-            <h2 class="saludo">Hola, soy Aldrin Valera</h2>
-            <h1 class="titulo-principal">Desarrollo Web <span class="resaltado">Optimizado.</span></h1>
-            <p class="descripcion">
-                Transformo ideas en soluciones digitales rápidas, limpias y eficientes. 
-                Especialista en HTML, CSS y JavaScript para potenciar tu negocio.
-            </p>
-            <div class="botones">
-                <a href="#proyectos" class="btn-primario">Ver mi trabajo</a>
-                <a href="#" class="btn-secundario">Mi GitHub</a>
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h2 class="saludo">Hola, soy Aldrin Valera</h2>
+                <h1 class="titulo-principal">Soluciones Web <span class="resaltado">Profesionales.</span></h1>
+                <p class="descripcion">
+                    Freelancer autónomo y autodidacta que transforma conceptos en experiencias digitales eficientes y elegantes. Trabajo con HTML, CSS y JavaScript para entregar resultados reales, no solo landings: actualmente desarrollo un sistema de facturación empresarial más complejo que optimiza ventas y gestión administrativa.
+                </p>
+                <div class="botones">
+                    <a href="#proyectos" class="btn-primario">Ver mi trabajo</a>
+                    <a href="#" class="btn-secundario">Mi GitHub</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/aldrin-valera.jpg" alt="Foto profesional de Aldrin Valera" />
             </div>
         </div>
     </header>
-
+    <main>
     <section class="sobre-mi" id="sobre-mi">
         <div class="contenedor-sobre-mi">
             <div class="texto-sobre-mi">
-                <h2 class="titulo-seccion">Conoce a <span class="resaltado-azul">Rizz</span></h2>
+                <h2 class="titulo-seccion">Conoce a <span class="resaltado-azul">Aldrin Valera</span></h2>
                 <p>
-                    Soy un desarrollador web enfocado en crear herramientas digitales que no solo atrapen la vista, sino que funcionen a la velocidad de la luz. Mi filosofía es simple: <strong>la estética y el rendimiento son innegociables.</strong>
+                    Soy freelancer autónomo y autodidacta, especializado en desarrollar soluciones web que combinan diseño atractivo con rendimiento superior. Trabajo con HTML, CSS y JavaScript para entregar experiencias digitales sólidas, accesibles y orientadas a resultados.
                 </p>
                 <p>
-                    Tengo un ojo meticuloso para los detalles visuales y una obsesión por la optimización. Así como me apasiona exprimir cada fotograma del hardware en un setup o ajustar la mecánica para que un motor rinda al máximo, aplico esa misma precisión a mi código. Construyo con HTML, CSS y JavaScript buscando siempre interfaces limpias, animaciones fluidas y tiempos de carga instantáneos.
+                    Mi enfoque es riguroso en cada detalle: diseño interfaces claras, optimizo la experiencia de usuario y garantizo tiempos de carga rápidos. Disfruto enfrentar retos técnicos y traduzco requisitos complejos en productos digitales eficientes y fáciles de usar.
                 </p>
             </div>
             <div class="skills-grid">
@@ -87,27 +94,28 @@
                 <article class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <span class="etiqueta-estado">Completado</span>
-                        <img src="assets/img/catador-1.jpg" alt="Vista 1" class="img-portada">
-                        <img src="assets/img/catador-2.jpg" alt="Vista 2" class="img-portada">
-                        <img src="assets/img/catador-3.jpg" alt="Vista 3" class="img-portada">
+                        <img src="img/catador-1.JPG" alt="Vista 1" class="img-portada">
+                        <img src="img/catador-2.JPG" alt="Vista 2" class="img-portada">
+                        <img src="img/catador-3.JPG" alt="Vista 3" class="img-portada">
                     </div>
                     <div class="contenido-proyecto">
                         <div class="tags-tech">
                             <span>HTML5</span>
                             <span>CSS3</span>
+                            <span>JavaScript</span>
                         </div>
-                        <h3>Gran Catador - Link in Bio</h3>
-                        <p>Plataforma de enlaces personalizados para negocio tipo bodegón. Diseño de interfaz limpia orientada a mejorar la conversión y organizar los canales de atención del cliente.</p>
-                        <a href="#" class="btn-proyecto">Ver Proyecto</a>
+                        <h3>Catálogo Interactivo con Carrito</h3>
+                        <p>Web interactiva que administra inventarios y muestra un catálogo completo de productos. El usuario puede seleccionar artículos, agregar al carrito y enviar la orden finalizada mediante WhatsApp para completar la compra.</p>
+                        <a href="https://grancatador.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-proyecto">Ver Proyecto</a>
                     </div>
                 </article>
 
                 <article class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <span class="etiqueta-estado">Completado</span>
-                        <img src="assets/img/flores-1.jpg" alt="Vista 1" class="img-portada">
-                        <img src="assets/img/flores-2.jpg" alt="Vista 2" class="img-portada">
-                        <img src="assets/img/flores-3.jpg" alt="Vista 3" class="img-portada">
+                        <img src="img/catador-2.JPG" alt="Vista 1" class="img-portada">
+                        <img src="img/catador-3.JPG" alt="Vista 2" class="img-portada">
+                        <img src="img/catador-4.JPG" alt="Vista 3" class="img-portada">
                     </div>
                     <div class="contenido-proyecto">
                         <div class="tags-tech">
@@ -115,26 +123,26 @@
                             <span>CSS/Animaciones</span>
                             <span>JavaScript</span>
                         </div>
-                        <h3>Experiencia Web Interactiva</h3>
-                        <p>Desarrollo de una landing page con animaciones de flores generadas por código y un reproductor de música integrado mediante JavaScript. Un enfoque en lógica interactiva y multimedia.</p>
-                        <a href="#" class="btn-proyecto">Ver Proyecto</a>
+                        <h3>Ciudad Catador - Landing Comercial</h3>
+                        <p>Landing page informativa para Ciudad Catador, un centro comercial. Presenta tiendas destacadas, eventos, horarios y zonas de ocio con una experiencia visual moderna y fácil de navegar.</p>
+                        <a href="https://ciudadcatador.netlify.app" target="_blank" rel="noopener noreferrer" class="btn-proyecto">Ver Proyecto</a>
                     </div>
                 </article>
 
                 <article class="tarjeta-proyecto">
                     <div class="imagen-proyecto">
                         <span class="etiqueta-estado pulse">En Desarrollo</span>
-                        <img src="assets/img/calc-1.jpg" alt="Vista 1" class="img-portada">
-                        <img src="assets/img/calc-2.jpg" alt="Vista 2" class="img-portada">
-                        <img src="assets/img/calc-3.jpg" alt="Vista 3" class="img-portada">
+                        <img src="img/catador-1.JPG" alt="Vista 1" class="img-portada">
+                        <img src="img/catador-3.JPG" alt="Vista 2" class="img-portada">
+                        <img src="img/catador-4.JPG" alt="Vista 3" class="img-portada">
                     </div>
                     <div class="contenido-proyecto">
                         <div class="tags-tech">
                             <span>JavaScript</span>
                             <span>PWA</span>
                         </div>
-                        <h3>Calculadora de Rendimiento</h3>
-                        <p>Herramienta web en proceso para cálculos rápidos offline. Interfaz oscura, minimalista y optimizada para uso en dispositivos móviles sin consumir datos.</p>
+                        <h3>Sistema de Facturación</h3>
+                        <p>Proyecto para pequeñas empresas de ventas con facturación integrada y control de clientes, productos y pagos. En desarrollo, diseñado para facilitar cierres de caja y llevar el control administrativo desde la web.</p>
                         <a href="#" class="btn-proyecto btn-disabled">Próximamente</a>
                     </div>
                 </article>
@@ -142,6 +150,7 @@
             </div>
         </div>
     </section>
+    </main>
 
     <footer class="footer">
         <div class="footer-content">

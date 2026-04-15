@@ -16,6 +16,7 @@
     font-size: 3rem;
     font-weight: 900;
     margin-bottom: 10px;
+    font-family: var(--font-bold);
 }
 
 .subtitulo-centrado {
@@ -126,6 +127,8 @@
     font-size: 1.4rem;
     margin-bottom: 15px;
     color: var(--text-main);
+    font-family: var(--font-bold);
+    font-weight: 700;
 }
 
 .contenido-proyecto p {
