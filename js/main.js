@@ -78,22 +78,44 @@ document.querySelectorAll('.animate-on-scroll').forEach(el => {
 const heroContent = document.querySelector('.hero-content');
 const heroImage = document.querySelector('.hero-image');
 
+// Seleccionamos también el botón de "Volver Arriba" (Lógica 7)
+const btnBackToTop = document.getElementById('btn-back-to-top');
+
+// --- SCROLL OPTIMIZADO CON REQUEST ANIMATION FRAME ---
+let isScrolling = false;
+
 window.addEventListener('scroll', () => {
-    // Solo aplicamos Parallax en pantallas mayores a 768px
-    if (window.innerWidth > 768) {
-        const scrolled = window.scrollY;
-        if (heroContent && heroImage) {
-            // Efecto: el texto baja y se desvanece suavemente, la imagen sube un poco
-            heroContent.style.transform = `translateY(${scrolled * 0.35}px)`;
-            heroContent.style.opacity = 1 - (scrolled * 0.0025);
-            heroImage.style.transform = `translateY(${scrolled * 0.15}px)`;
-        }
-    } else {
-        // En móvil reseteamos los estilos para que fluya natural
-        if (heroContent) { heroContent.style.transform = 'translateY(0)'; heroContent.style.opacity = 1; }
-        if (heroImage) { heroImage.style.transform = 'translateY(0)'; }
+    if (!isScrolling) {
+        window.requestAnimationFrame(() => {
+            const scrolled = window.scrollY;
+
+            // A. Efecto Parallax en el Hero (Exclusivo para PC, usando translate3d para GPU)
+            if (window.innerWidth > 768) {
+                if (heroContent && heroImage) {
+                    heroContent.style.transform = `translate3d(0, ${scrolled * 0.35}px, 0)`;
+                    heroContent.style.opacity = Math.max(0, 1 - (scrolled * 0.0025));
+                    heroImage.style.transform = `translate3d(0, ${scrolled * 0.15}px, 0)`;
+                }
+            } else {
+                // En móvil reseteamos
+                if (heroContent) { heroContent.style.transform = 'translate3d(0, 0, 0)'; heroContent.style.opacity = 1; }
+                if (heroImage) { heroImage.style.transform = 'translate3d(0, 0, 0)'; }
+            }
+
+            // B. Mostrar/Ocultar Botón Volver Arriba
+            if (btnBackToTop) {
+                if (scrolled > 300) {
+                    btnBackToTop.classList.add('show');
+                } else {
+                    btnBackToTop.classList.remove('show');
+                }
+            }
+
+            isScrolling = false;
+        });
+        isScrolling = true;
     }
-});
+}, { passive: true }); // passive: true evita bloqueos en el hilo principal
 
 // 6. Efecto Máquina de Escribir (Typewriter)
 const tituloPrincipal = document.querySelector('.titulo-principal');
@@ -164,18 +186,8 @@ if (tituloPrincipal) {
     setTimeout(typeBaseText, 1000);
 }
 
-// 7. Lógica del Botón "Volver Arriba"
-const btnBackToTop = document.getElementById('btn-back-to-top');
-
+// Click del Botón "Volver Arriba"
 if (btnBackToTop) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) { // Aparece después de hacer scroll 300px
-            btnBackToTop.classList.add('show');
-        } else {
-            btnBackToTop.classList.remove('show');
-        }
-    });
-
     btnBackToTop.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });

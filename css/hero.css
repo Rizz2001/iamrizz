@@ -22,12 +22,14 @@
 
 .hero-content {
     max-width: 650px;
+    will-change: transform, opacity;
 }
 
 .hero-image {
     display: flex;
     justify-content: center;
     align-items: center;
+    will-change: transform;
 }
 
 .hero-image img {
