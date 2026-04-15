@@ -65,6 +65,21 @@
     background-clip: text;
 }
 
+.cursor {
+    font-weight: 400;
+    color: var(--neon-blue);
+    display: inline-block;
+}
+
+.cursor.blink {
+    animation: blink-cursor 0.8s infinite step-end;
+}
+
+@keyframes blink-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .descripcion {
     font-size: 1.25rem;
     color: var(--text-muted);
@@ -123,4 +138,27 @@
 
 .btn-secundario:hover {
     color: var(--neon-blue);
+}
+
+/* Efecto Neón para la imagen (Solo PC) */
+@media screen and (min-width: 769px) {
+    .hero-image img {
+        border: 2px solid var(--neon-blue);
+        box-shadow: 0 0 15px rgba(0, 210, 255, 0.4), 
+                    0 0 30px rgba(0, 210, 255, 0.2);
+        transition: all var(--transition-medium);
+        animation: resplandor-neon 3s ease-in-out infinite alternate;
+    }
+
+    .hero-image img:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 0 25px rgba(0, 210, 255, 0.6), 
+                    0 0 50px rgba(0, 210, 255, 0.4),
+                    0 0 80px rgba(0, 210, 255, 0.2);
+    }
+
+    @keyframes resplandor-neon {
+        from { box-shadow: 0 0 15px rgba(0, 210, 255, 0.4), 0 0 30px rgba(0, 210, 255, 0.2); }
+        to { box-shadow: 0 0 25px rgba(0, 210, 255, 0.6), 0 0 50px rgba(0, 210, 255, 0.3); }
+    }
 }

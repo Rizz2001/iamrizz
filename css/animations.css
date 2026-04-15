@@ -1,0 +1,38 @@
+/* =========================================
+   ANIMACIONES DE SCROLL Y PARALLAX
+   ========================================= */
+
+/* Estado inicial para elementos a animar (Comportamiento en PC) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+}
+
+/* Estado visible (se agrega con JavaScript) */
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Retrasos escalonados para que las tarjetas no aparezcan de golpe al mismo tiempo */
+.skills-grid .skill-card:nth-child(1), .grid-proyectos .tarjeta-proyecto:nth-child(1) { transition-delay: 0.1s; }
+.skills-grid .skill-card:nth-child(2), .grid-proyectos .tarjeta-proyecto:nth-child(2) { transition-delay: 0.25s; }
+.skills-grid .skill-card:nth-child(3), .grid-proyectos .tarjeta-proyecto:nth-child(3) { transition-delay: 0.4s; }
+
+/* --- COMPORTAMIENTO DIFERENTE EN MÓVIL --- */
+@media screen and (max-width: 768px) {
+    .animate-on-scroll {
+        /* En móvil usamos un ligero slide lateral con scale, en lugar de subir */
+        transform: translateX(-20px) scale(0.98);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    .animate-on-scroll.is-visible {
+        transform: translateX(0) scale(1);
+    }
+    
+    /* Quitamos el delay en móvil para que el usuario no espere al hacer scroll rápido */
+    .animate-on-scroll { transition-delay: 0s !important; }
+}

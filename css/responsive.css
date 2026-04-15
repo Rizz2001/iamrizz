@@ -332,6 +332,11 @@
 /* =========================================
    DISEÑO RESPONSIVE (MÓVILES PEQUEÑOS 480px)
    ========================================= */
+@keyframes textReveal {
+    0% { opacity: 0; transform: translateY(40px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 @media screen and (max-width: 480px) {
     .navbar {
         padding: 12px 15px;
@@ -386,6 +391,16 @@
         flex-direction: column;
         align-items: center;
     }
+
+    /* Los elementos dentro del hero inician ocultos y aparecen en cascada */
+    .hero-content > * {
+        opacity: 0;
+        animation: textReveal 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    }
+    .hero-content .saludo { animation-delay: 0.4s; }
+    .hero-content .titulo-principal { animation-delay: 0.6s; }
+    .hero-content .descripcion { animation-delay: 0.8s; }
+    .hero-content .botones { animation-delay: 1s; }
 
     .saludo {
         font-size: 0.9rem;
