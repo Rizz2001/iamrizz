@@ -3,7 +3,8 @@
    ========================================= */
 .proyectos {
     padding: 140px 50px;
-    background-color: var(--bg-dark);
+    /* Se añade un resplandor superior para unificar el estilo neón */
+    background: var(--bg-dark) radial-gradient(ellipse at 50% 0%, rgba(0, 210, 255, 0.1) 0%, transparent 50%);
     border-top: 1px solid rgba(0, 210, 255, 0.15);
     position: relative;
 }

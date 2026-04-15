@@ -2,8 +2,9 @@
    FOOTER (PIE DE PÁGINA)
    ========================================= */
 .footer {
-    background-color: #050506;
     padding: 80px 50px 30px;
+    /* Se añade un resplandor superior para unificar el estilo neón */
+    background: #050506 radial-gradient(ellipse at 50% 0%, rgba(0, 210, 255, 0.15) 0%, transparent 60%);
     border-top: 1px solid rgba(0, 210, 255, 0.15);
     text-align: center;
     position: relative;
@@ -131,6 +132,11 @@
 .btn-back-to-top svg {
     width: 24px;
     height: 24px;
+}
+
+/* Accesibilidad: Outline redondo para botones circulares */
+.whatsapp-float:focus-visible, .btn-back-to-top:focus-visible {
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {

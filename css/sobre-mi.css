@@ -3,7 +3,8 @@
    ========================================= */
 .sobre-mi {
     padding: 140px 50px;
-    background-color: var(--bg-dark);
+    /* Se añade un resplandor superior para unificar el estilo neón */
+    background: var(--bg-dark) radial-gradient(ellipse at 50% 0%, rgba(0, 210, 255, 0.1) 0%, transparent 50%);
     border-top: 1px solid rgba(0, 210, 255, 0.15);
     position: relative;
 }
@@ -95,9 +96,11 @@
 
 .skill-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(0, 210, 255, 0.4);
-    background: linear-gradient(135deg, rgba(0, 210, 255, 0.08), rgba(10, 10, 12, 0.9));
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 210, 255, 0.15);
+    border-color: var(--neon-blue);
+    /* Sombra neón más intensa para igualar las tarjetas de proyecto */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 
+                0 0 15px rgba(0, 210, 255, 0.4), 
+                0 0 30px rgba(0, 210, 255, 0.2);
 }
 
 .skill-card:hover::before {

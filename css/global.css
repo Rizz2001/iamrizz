@@ -56,3 +56,18 @@ ul {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 210, 255, 0.4);
 }
+
+/* =========================================
+   ACCESIBILIDAD (NAVEGACIÓN POR TECLADO)
+   ========================================= */
+/* Contorno neón claro para quienes navegan con la tecla TAB */
+:focus-visible {
+    outline: 3px solid var(--neon-blue);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+/* Ocultar el outline estándar cuando se hace clic con el ratón/touch */
+:focus:not(:focus-visible) {
+    outline: none;
+}
