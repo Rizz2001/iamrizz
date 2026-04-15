@@ -3,9 +3,21 @@
    ========================================= */
 .footer {
     background-color: #050506;
-    padding: 60px 50px 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 80px 50px 30px;
+    border-top: 1px solid rgba(0, 210, 255, 0.15);
     text-align: center;
+    position: relative;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
 }
 
 .footer-content {
@@ -44,4 +56,67 @@
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 20px;
     width: 100%;
+}
+
+/* Botón Flotante de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    transition: var(--transition-fast);
+    z-index: 999;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-float:hover {
+    background-color: #1fad50;
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6);
+    transform: scale(1.1);
+}
+
+.whatsapp-float:active {
+    transform: scale(0.95);
+}
+
+.whatsapp-float svg {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .whatsapp-float {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-float svg {
+        width: 25px;
+        height: 25px;
+    }
 }

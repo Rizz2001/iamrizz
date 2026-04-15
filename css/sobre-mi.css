@@ -2,9 +2,21 @@
    SECCIÓN SOBRE MÍ Y SKILLS
    ========================================= */
 .sobre-mi {
-    padding: 100px 50px;
+    padding: 140px 50px;
     background-color: var(--bg-dark);
-    border-top: 1px solid rgba(255, 255, 255, 0.05); 
+    border-top: 1px solid rgba(0, 210, 255, 0.15);
+    position: relative;
+}
+
+.sobre-mi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-blue), transparent);
 }
 
 .contenedor-sobre-mi {
@@ -21,11 +33,26 @@
     margin-bottom: 30px;
     font-weight: 900;
     font-family: var(--font-bold);
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-seccion::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    width: 60px;
+    height: 3px;
+    background: var(--neon-blue);
 }
 
 .resaltado-azul {
-    color: var(--neon-blue);
-    text-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+    background: linear-gradient(90deg, var(--neon-blue), #00a8ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: none;
 }
 
 .texto-sobre-mi p {
@@ -47,8 +74,8 @@
 
 .skill-card {
     background: var(--bg-light);
-    padding: 25px;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: var(--transition-medium);
     position: relative;
@@ -67,17 +94,33 @@
 }
 
 .skill-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(0, 210, 255, 0.3);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 210, 255, 0.1);
+    transform: translateY(-8px);
+    border-color: rgba(0, 210, 255, 0.4);
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.08), rgba(10, 10, 12, 0.9));
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 210, 255, 0.15);
 }
 
 .skill-card:hover::before {
     width: 100%;
 }
 
+.skill-number {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: rgba(0, 210, 255, 0.15);
+    font-family: var(--font-bold);
+}
+
+.skill-card:hover .skill-number {
+    color: rgba(0, 210, 255, 0.3);
+    transition: var(--transition-medium);
+}
+
 .skill-icono {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 15px;
 }
 

@@ -65,13 +65,20 @@
     /* Hero */
     .hero {
         min-height: 100vh;
-        padding: 80px 20px 40px;
+        padding: 80px 20px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .hero-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 0;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-content {
@@ -86,48 +93,70 @@
     .hero-image {
         order: -1;
         width: 100%;
-        max-width: 300px;
+        max-width: 340px;
+        margin-bottom: 30px;
     }
 
     .hero-image img {
         max-width: 100%;
         height: auto;
+        border-radius: 25px;
     }
 
     .saludo {
-        font-size: 1rem;
-        margin-bottom: 10px;
+        font-size: 1.05rem;
+        margin-bottom: 12px;
     }
 
     .titulo-principal {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         line-height: 1.2;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
     }
 
     .descripcion {
-        font-size: 0.95rem;
-        margin-bottom: 25px;
-        max-width: 100%;
-        line-height: 1.6;
+        font-size: 1rem;
+        margin-bottom: 28px;
+        max-width: 600px;
+        line-height: 1.7;
     }
 
     .botones {
         flex-direction: column;
         width: 100%;
-        gap: 12px;
+        max-width: 300px;
+        gap: 14px;
     }
 
     .btn-primario, .btn-secundario {
         width: 100%;
         margin: 0;
-        padding: 12px 20px;
-        font-size: 0.9rem;
+        padding: 13px 22px;
+        font-size: 0.95rem;
+        border-radius: 6px;
+        transition: all var(--transition-medium);
+    }
+
+    .btn-primario {
+        background-color: var(--neon-blue);
+        color: var(--bg-dark);
+        border: 2px solid var(--neon-blue);
+        box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+    }
+
+    .btn-primario:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(0, 210, 255, 0.5);
     }
 
     /* Sobre Mí */
     .sobre-mi {
-        padding: 50px 20px;
+        padding: 80px 20px;
+        border-top: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    .sobre-mi::before {
+        display: none;
     }
 
     .contenedor-sobre-mi {
@@ -137,28 +166,82 @@
     }
 
     .titulo-seccion {
+        font-size: 2.2rem;
+        margin-bottom: 30px;
+        padding-top: 0;
+    }
+
+    .titulo-seccion::before {
+        display: none;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-card {
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    .skill-number {
         font-size: 2rem;
-        margin-bottom: 20px;
+        top: 12px;
+        right: 15px;
+    }
+
+    .skill-icono {
+        font-size: 2.2rem;
+        margin-bottom: 12px;
+    }
+
+    .skill-card h3 {
+        font-size: 1.15rem;
+        margin: 12px 0 8px;
+        font-weight: 600;
+    }
+
+    .skill-card p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        color: var(--text-muted);
     }
 
     .texto-sobre-mi p {
         font-size: 0.95rem;
         margin-bottom: 15px;
     }
-
-    /* Proyectos */
     .proyectos {
-        padding: 50px 20px;
+        padding: 80px 20px;
+        border-top: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    .proyectos::before {
+        display: none;
     }
 
     .titulo-centrado {
-        font-size: 2rem;
+        font-size: 2.2rem;
         margin-bottom: 10px;
     }
 
+    .titulo-centrado::before {
+        width: 50px;
+        height: 2px;
+        margin: 0 auto 18px;
+    }
+
     .subtitulo-centrado {
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         margin-bottom: 40px;
+    }
+
+    .subtitulo-centrado::after {
+        width: 35px;
+        height: 2px;
+        margin: 12px auto 0;
     }
 
     .grid-proyectos {
@@ -166,22 +249,83 @@
         gap: 30px;
     }
 
+    .tarjeta-proyecto {
+        border-radius: 12px;
+    }
+
+    .imagen-proyecto {
+        height: 220px;
+    }
+
+    .contenido-proyecto {
+        padding: 25px;
+    }
+
     .contenido-proyecto h3 {
-        font-size: 1.1rem;
+        font-size: 1.15rem;
+        margin-bottom: 10px;
     }
 
     .contenido-proyecto p {
         font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .btn-proyecto {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .skill-card {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .skill-number {
+        font-size: 1.6rem;
+        top: 10px;
+        right: 12px;
+    }
+
+    .skill-icono {
+        font-size: 1.8rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.1rem;
+        margin: 12px 0 8px;
+    }
+
+    .skill-card p {
+        font-size: 0.85rem;
+        line-height: 1.6;
     }
 
     /* Footer */
     .footer {
-        padding: 40px 20px 20px;
+        padding: 60px 20px 20px;
+        border-top: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    .footer::before {
+        display: none;
     }
 
     .social-links {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: row;
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-links a {
+        font-size: 0.9rem;
     }
 }
 
@@ -199,107 +343,207 @@
 
     /* Hero */
     .hero {
-        min-height: auto;
-        padding: 60px 15px 30px;
+        min-height: 100vh;
+        padding: 80px 15px 50px;
+        background: url("../img/rizzphoto.webp") center/cover no-repeat;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(10, 10, 12, 0.75), rgba(10, 10, 12, 0.88));
+        pointer-events: none;
     }
 
     .hero-grid {
-        gap: 20px;
+        gap: 0;
+        grid-template-columns: 1fr;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 100%;
     }
 
     .hero-image {
-        margin-bottom: 15px;
+        display: none;
     }
 
-    .hero-image img {
-        max-width: 260px;
-        border-radius: 20px;
+    .hero-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .saludo {
-        font-size: 0.85rem;
-        letter-spacing: 1px;
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+        color: var(--neon-blue);
     }
 
     .titulo-principal {
-        font-size: 1.8rem;
-        margin-bottom: 12px;
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        font-weight: 900;
+        color: var(--text-main);
     }
 
     .descripcion {
-        font-size: 0.85rem;
-        margin-bottom: 20px;
-        line-height: 1.5;
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        line-height: 1.8;
+        max-width: 100%;
+        color: var(--text-muted);
     }
 
     .botones {
-        gap: 10px;
+        gap: 15px;
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
     }
 
     .btn-primario, .btn-secundario {
-        padding: 10px 16px;
-        font-size: 0.8rem;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+        transition: all var(--transition-medium);
+    }
+
+    .btn-primario {
+        background-color: var(--neon-blue);
+        color: var(--bg-dark);
+        border: 2px solid var(--neon-blue);
+        box-shadow: 0 8px 20px rgba(0, 210, 255, 0.3);
+    }
+
+    .btn-primario:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 28px rgba(0, 210, 255, 0.5);
     }
 
     /* Secciones */
     .sobre-mi {
-        padding: 40px 15px;
+        padding: 70px 15px;
+        border-top: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    .sobre-mi::before {
+        display: none;
     }
 
     .proyectos {
-        padding: 40px 15px;
+        padding: 70px 15px;
+        border-top: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    .proyectos::before {
+        display: none;
     }
 
     .titulo-seccion {
-        font-size: 1.5rem;
-        margin-bottom: 15px;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+        padding-top: 0;
+    }
+
+    .titulo-seccion::before {
+        display: none;
     }
 
     .titulo-centrado {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .titulo-centrado::before {
+        width: 45px;
+        height: 2px;
+        margin: 0 auto 16px;
     }
 
     .subtitulo-centrado {
-        font-size: 0.85rem;
-        margin-bottom: 30px;
+        font-size: 0.9rem;
+        margin-bottom: 35px;
+    }
+
+    .subtitulo-centrado::after {
+        width: 32px;
+        height: 2px;
+        margin: 10px auto 0;
     }
 
     .skill-card {
-        padding: 20px;
-        margin-bottom: 15px;
+        padding: 22px;
+        margin-bottom: 8px;
+        border-radius: 10px;
+    }
+
+    .skill-number {
+        font-size: 1.8rem;
+        top: 10px;
+        right: 12px;
     }
 
     .skill-card h3 {
-        font-size: 1rem;
+        font-size: 1.05rem;
+        margin: 12px 0 8px;
     }
 
     .skill-card p {
         font-size: 0.85rem;
+        line-height: 1.6;
     }
 
     .skill-icono {
-        font-size: 1.5rem;
+        font-size: 2rem;
+        margin-bottom: 8px;
     }
 
     .contenido-proyecto h3 {
-        font-size: 1rem;
+        font-size: 1.05rem;
     }
 
     .contenido-proyecto p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+        line-height: 1.6;
         margin-bottom: 15px;
     }
 
     .tags-tech span {
-        font-size: 0.65rem;
+        font-size: 0.7rem;
         padding: 4px 8px;
     }
 
     .footer {
-        padding: 30px 15px 15px;
+        padding: 50px 15px 20px;
+        border-top: 1px solid rgba(0, 210, 255, 0.15);
+    }
+
+    .footer::before {
+        display: none;
     }
 
     .footer .logo {
         font-size: 16px;
+    }
+
+    .social-links {
+        gap: 20px;
     }
 }
