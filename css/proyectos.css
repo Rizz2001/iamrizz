@@ -162,6 +162,18 @@
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: rgba(0, 210, 255, 0.05);
+    border: 1px solid rgba(0, 210, 255, 0.1);
+    transition: var(--transition-fast);
+    cursor: default;
+}
+
+.tags-tech span:hover {
+    background: rgba(0, 210, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 210, 255, 0.3);
+    transform: translateY(-2px);
 }
 
 .contenido-proyecto h3 {

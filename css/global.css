@@ -35,3 +35,24 @@ ul {
 .text-muted {
     color: var(--text-muted);
 }
+
+/* =========================================
+   CUSTOM SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1a1a20;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 210, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 210, 255, 0.4);
+}

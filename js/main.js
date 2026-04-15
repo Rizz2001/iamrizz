@@ -163,3 +163,20 @@ if (tituloPrincipal) {
     // Iniciamos la animación con un retraso (da tiempo a que cargue la vista)
     setTimeout(typeBaseText, 1000);
 }
+
+// 7. Lógica del Botón "Volver Arriba"
+const btnBackToTop = document.getElementById('btn-back-to-top');
+
+if (btnBackToTop) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Aparece después de hacer scroll 300px
+            btnBackToTop.classList.add('show');
+        } else {
+            btnBackToTop.classList.remove('show');
+        }
+    });
+
+    btnBackToTop.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
